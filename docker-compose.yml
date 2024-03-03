@@ -24,8 +24,6 @@ services:
     image: scrapy_crawler
     environment:
       MONGO_URI: mongodb://admin:admin@database:27017
-    depends_on:
-      - database
     networks:
       - crawler_network
 
@@ -35,6 +33,8 @@ services:
     container_name: fanabc_crawler
     environment:
       spider_name: fanabc
+    depends_on:
+      - database
 
   bbc_crawler:
     extends:
@@ -42,6 +42,8 @@ services:
     container_name: bbc_crawler
     environment:
       spider_name: bbc
+    depends_on:
+      - database
 
   reporter_crawler:
     extends:
@@ -49,6 +51,8 @@ services:
     container_name: reporter_crawler
     environment:
       spider_name: reporter
+    depends_on:
+      - database
 
   wikipedia_crawler:
     extends:
@@ -56,6 +60,8 @@ services:
     container_name: wikipedia_crawler
     environment:
       spider_name: wikipedia
+    depends_on:
+      - database
 
   ebc_crawler:
     extends:
@@ -64,6 +70,8 @@ services:
     environment:
       spider_name: ebc
       start_url: https://www.ebc.et/
+    depends_on:
+      - database
 
   voa_crawler:
     extends:
@@ -72,6 +80,8 @@ services:
     environment:
       spider_name: voa
       start_url: https://amharic.voanews.com/
+    depends_on:
+      - database
 
   al_ain_crawler:
     extends:
@@ -80,6 +90,8 @@ services:
     environment:
       spider_name: al_ain
       start_url: https://am.al-ain.com/
+    depends_on:
+      - database
 
   addis_admass_crawler:
     extends:
@@ -88,6 +100,8 @@ services:
     environment:
       spider_name: addis_admass
       start_url: https://www.addisadmassnews.com/
+    depends_on:
+      - database
   
   # https://ethioreference.com/archives/category/amharic
   ethio_reference_crawler:
@@ -97,6 +111,8 @@ services:
     environment:
       spider_name: ethio_reference
       start_url: https://ethioreference.com/archives/category/amharic
+    depends_on:
+      - database
 
   # https://ethiopiainsider.com/
   ethiopia_insider_crawler:
@@ -106,6 +122,8 @@ services:
     environment:
       spider_name: ethiopia_insider
       start_url: https://ethiopiainsider.com/
+    depends_on:
+      - database
 
   # https://www.ethiopianorthodox.org/
   ethiopian_orthodox_crawler:
@@ -115,6 +133,8 @@ services:
     environment:
       spider_name: ethiopian_orthodox
       start_url: https://www.ethiopianorthodox.org/
+    depends_on:
+      - database
 
   # https://www.press.et/
   press_crawler:
@@ -124,6 +144,8 @@ services:
     environment:
       spider_name: press
       start_url: https://www.press.et/
+    depends_on:
+      - database
 
   # https://www.eotcmk.org/a/
   eotc_crawler:
@@ -133,6 +155,8 @@ services:
     environment:
       spider_name: eotc
       start_url: https://www.eotcmk.org/a/
+    depends_on:
+      - database
 
   # https://www.ena.et/
   ena_crawler:
@@ -142,6 +166,8 @@ services:
     environment:
       spider_name: ena
       start_url: https://www.ena.et/
+    depends_on:
+      - database
 
   # https://dictionary.abyssinica.com/
   abyssinica_crawler:
@@ -151,6 +177,8 @@ services:
     environment:
       spider_name: abyssinica
       start_url: https://dictionary.abyssinica.com/
+    depends_on:
+      - database
 
 
 

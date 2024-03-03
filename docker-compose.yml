@@ -1,0 +1,185 @@
+version: '3'
+
+
+networks:
+  crawler_network:
+
+
+services:
+  database:
+    image: mongo:4.1
+    container_name: crawler_database
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: admin
+    volumes:
+      - ./db:/data/db
+    networks:
+      - crawler_network
+    hostname: database
+
+  crawler_base:
+    image: scrapy_crawler
+    environment:
+      MONGO_URI: mongodb://admin:admin@database:27017
+    depends_on:
+      - database
+    networks:
+      - crawler_network
+
+  fanabc_crawler:
+    extends:
+      service: crawler_base
+    container_name: fanabc_crawler
+    environment:
+      spider_name: fanabc
+
+  bbc_crawler:
+    extends:
+      service: crawler_base
+    container_name: bbc_crawler
+    environment:
+      spider_name: bbc
+
+  reporter_crawler:
+    extends:
+      service: crawler_base
+    container_name: reporter_crawler
+    environment:
+      spider_name: reporter
+
+  wikipedia_crawler:
+    extends:
+      service: crawler_base
+    container_name: wikipedia_crawler
+    environment:
+      spider_name: wikipedia
+
+  ebc_crawler:
+    extends:
+      service: crawler_base
+    container_name: ebc_crawler
+    environment:
+      spider_name: ebc
+      start_url: https://www.ebc.et/
+
+  voa_crawler:
+    extends:
+      service: crawler_base
+    container_name: voa_crawler
+    environment:
+      spider_name: voa
+      start_url: https://amharic.voanews.com/
+
+  al_ain_crawler:
+    extends:
+      service: crawler_base
+    container_name: al_ain_crawler
+    environment:
+      spider_name: al_ain
+      start_url: https://am.al-ain.com/
+
+  addis_admass_crawler:
+    extends:
+      service: crawler_base
+    container_name: addis_admass_crawler
+    environment:
+      spider_name: addis_admass
+      start_url: https://www.addisadmassnews.com/
+  
+  # https://ethioreference.com/archives/category/amharic
+  ethio_reference_crawler:
+    extends:
+      service: crawler_base
+    container_name: ethio_reference_crawler
+    environment:
+      spider_name: ethio_reference
+      start_url: https://ethioreference.com/archives/category/amharic
+
+  # https://ethiopiainsider.com/
+  ethiopia_insider_crawler:
+    extends:
+      service: crawler_base
+    container_name: ethiopia_insider_crawler
+    environment:
+      spider_name: ethiopia_insider
+      start_url: https://ethiopiainsider.com/
+
+  # https://www.ethiopianorthodox.org/
+  ethiopian_orthodox_crawler:
+    extends:
+      service: crawler_base
+    container_name: ethiopian_orthodox_crawler
+    environment:
+      spider_name: ethiopian_orthodox
+      start_url: https://www.ethiopianorthodox.org/
+
+  # https://www.press.et/
+  press_crawler:
+    extends:
+      service: crawler_base
+    container_name: press_crawler
+    environment:
+      spider_name: press
+      start_url: https://www.press.et/
+
+  # https://www.eotcmk.org/a/
+  eotc_crawler:
+    extends:
+      service: crawler_base
+    container_name: eotc_crawler
+    environment:
+      spider_name: eotc
+      start_url: https://www.eotcmk.org/a/
+
+  # https://www.ena.et/
+  ena_crawler:
+    extends:
+      service: crawler_base
+    container_name: ena_crawler
+    environment:
+      spider_name: ena
+      start_url: https://www.ena.et/
+
+  # https://dictionary.abyssinica.com/
+  abyssinica_crawler:
+    extends:
+      service: crawler_base
+    container_name: abyssinica_crawler
+    environment:
+      spider_name: abyssinica
+      start_url: https://dictionary.abyssinica.com/
+
+
+
+# how does the tokenizer work*
+# how to transform corpus data to a dataset
+
+# data cleaning
+# how to make a dataset for LLM* (best practice)
+
+# benchmark for LLM
+
+# check wandb
+# chack langchain
+
+
+
+# objectives
+# 1. crawl data from different amharic news websites
+# 2. clean the data
+# 3. make a dataset for LLM
+# 4. train a language model
+# 5. make a web app for the language model
+# 6. make a web app for the news crawler
+# 7. make a web app for the news classifier
+# 8. make a web app for the news summarizer
+# 9. make a web app for the news translator
+# 10. make a web app for the news sentiment analyzer
+# 11. make a web app for the news topic modeler
+# 12. make a web app for the news recommender
+# 13. make a web app for the news search engine
+# 14. make a web app for the news visualizer
+

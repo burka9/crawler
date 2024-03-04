@@ -1,3 +1,5 @@
+#!/usr/bin/bash
+
 echo "------------------------------"
 echo "------------------------------"
 echo "building scrapy_crawler image"

@@ -1,4 +1,4 @@
 #!/usr/bin/bash
 
 cd "/home/ubuntu/codes/crawler"
-docker compose up --no-recreate -d
+docker compose up --no-recreate -d --remove-orphans

@@ -4,7 +4,7 @@ After=docker.service network.target
 
 
 [Service]
-ExecStart=/bin/bash -c "/home/ubuntu/codes/crawler/up.sh"
+ExecStart=/bin/bash -c "/home/ubuntu/codes/crawler/boot.sh"
 WorkingDirectory=/home/ubuntu/codes/crawler
 Restart=no
 

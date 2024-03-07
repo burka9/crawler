@@ -211,3 +211,951 @@ services:
 # 13. make a web app for the news search engine
 # 14. make a web app for the news visualizer
 
+
+
+  www_zehabesha_com:
+    extends:
+      service: crawler_base
+    container_name: www_zehabesha_com
+    environment:
+      spider_name: wwwzehabeshacomamharic
+      start_url: http://www.zehabesha.com/amharic/
+    depends_on:
+      - database
+
+
+
+  www_ethioenergyauthority_gov_et:
+    extends:
+      service: crawler_base
+    container_name: www_ethioenergyauthority_gov_et
+    environment:
+      spider_name: wwwethioenergyauthoritygovetindexphpoptioncomcontentviewfeaturedItemid101langam
+      start_url: http://www.ethioenergyauthority.gov.et/index.php?option=com_content&view=featured&Itemid=101&lang=am
+    depends_on:
+      - database
+
+
+
+  abbaymedia_com:
+    extends:
+      service: crawler_base
+    container_name: abbaymedia_com
+    environment:
+      spider_name: abbaymediacomamharic
+      start_url: http://abbaymedia.com/amharic/
+    depends_on:
+      - database
+
+
+
+  am_globalvoices_org:
+    extends:
+      service: crawler_base
+    container_name: am_globalvoices_org
+    environment:
+      spider_name: amglobalvoicesorg
+      start_url: https://am.globalvoices.org/
+    depends_on:
+      - database
+
+
+
+  www_wikimezmur_org:
+    extends:
+      service: crawler_base
+    container_name: www_wikimezmur_org
+    environment:
+      spider_name: wwwwikimezmurorgamHome
+      start_url: http://www.wikimezmur.org/am/Home
+    depends_on:
+      - database
+
+
+
+  www_mereja_com:
+    extends:
+      service: crawler_base
+    container_name: www_mereja_com
+    environment:
+      spider_name: wwwmerejacomamharic
+      start_url: http://www.mereja.com/amharic/
+    depends_on:
+      - database
+
+
+
+  www_moneyfromsweden_se:
+    extends:
+      service: crawler_base
+    container_name: www_moneyfromsweden_se
+    environment:
+      spider_name: wwwmoneyfromswedensesvAmharicwhatismoneyfromsweden
+      start_url: http://www.moneyfromsweden.se/sv/Amharic-what_is_money_from_sweden
+    depends_on:
+      - database
+
+
+
+  www_addisdimts_com:
+    extends:
+      service: crawler_base
+    container_name: www_addisdimts_com
+    environment:
+      spider_name: wwwaddisdimtscomcategoryinamharic
+      start_url: http://www.addisdimts.com/category/in-amharic/
+    depends_on:
+      - database
+
+
+
+  www_dw_com:
+    extends:
+      service: crawler_base
+    container_name: www_dw_com
+    environment:
+      spider_name: wwwdwcomamይዘትs11646
+      start_url: http://www.dw.com/am/ይዘት/s-11646
+    depends_on:
+      - database
+
+
+
+  www_jw_org:
+    extends:
+      service: crawler_base
+    container_name: www_jw_org
+    environment:
+      spider_name: wwwjworgam
+      start_url: https://www.jw.org/am/
+    depends_on:
+      - database
+
+
+
+  ecadforum_com:
+    extends:
+      service: crawler_base
+    container_name: ecadforum_com
+    environment:
+      spider_name: ecadforumcomAmharic
+      start_url: http://ecadforum.com/Amharic/
+    depends_on:
+      - database
+
+
+
+  info_securityinabox_org:
+    extends:
+      service: crawler_base
+    container_name: info_securityinabox_org
+    environment:
+      spider_name: infosecurityinaboxorgam
+      start_url: https://info.securityinabox.org/am
+    depends_on:
+      - database
+
+
+
+  www_wordproject_org:
+    extends:
+      service: crawler_base
+    container_name: www_wordproject_org
+    environment:
+      spider_name: wwwwordprojectorgbiblesamindexhtm
+      start_url: https://www.wordproject.org/bibles/am/index.htm
+    depends_on:
+      - database
+
+
+
+  www_samfunnskunnskap_no:
+    extends:
+      service: crawler_base
+    container_name: www_samfunnskunnskap_no
+    environment:
+      spider_name: wwwsamfunnskunnskapnopageid538langam
+      start_url: http://www.samfunnskunnskap.no/?page_id=538&lang=am
+    depends_on:
+      - database
+
+
+
+  www_yegara_com:
+    extends:
+      service: crawler_base
+    container_name: www_yegara_com
+    environment:
+      spider_name: wwwyegaracomam
+      start_url: http://www.yegara.com/am/
+    depends_on:
+      - database
+
+
+
+  www_ethiopanorama_com:
+    extends:
+      service: crawler_base
+    container_name: www_ethiopanorama_com
+    environment:
+      spider_name: wwwethiopanoramacom
+      start_url: http://www.ethiopanorama.com/
+    depends_on:
+      - database
+
+
+
+  hesperian_org:
+    extends:
+      service: crawler_base
+    container_name: hesperian_org
+    environment:
+      spider_name: hesperianorgbooksandresourcesresourcesinamharic
+      start_url: http://hesperian.org/books-and-resources/resources-in-amharic/
+    depends_on:
+      - database
+
+
+
+  www_eff_org:
+    extends:
+      service: crawler_base
+    container_name: www_eff_org
+    environment:
+      spider_name: wwwefforgrunode80854
+      start_url: https://www.eff.org/ru/node/80854
+    depends_on:
+      - database
+
+
+
+  bdu_edu_et:
+    extends:
+      service: crawler_base
+    container_name: bdu_edu_et
+    environment:
+      spider_name: bdueduetaldi
+      start_url: http://bdu.edu.et/aldi/
+    depends_on:
+      - database
+
+
+
+  www_ethiocloud_com:
+    extends:
+      service: crawler_base
+    container_name: www_ethiocloud_com
+    environment:
+      spider_name: wwwethiocloudcomam
+      start_url: http://www.ethiocloud.com/am/
+    depends_on:
+      - database
+
+
+
+  yihune88_wordpress_com:
+    extends:
+      service: crawler_base
+    container_name: yihune88_wordpress_com
+    environment:
+      spider_name: yihune88wordpresscom
+      start_url: https://yihune88.wordpress.com/
+    depends_on:
+      - database
+
+
+
+  www_cherrycreekschools_org:
+    extends:
+      service: crawler_base
+    container_name: www_cherrycreekschools_org
+    environment:
+      spider_name: wwwcherrycreekschoolsorgamharicPagesdefaultaspx
+      start_url: http://www.cherrycreekschools.org/amharic/Pages/default.aspx
+    depends_on:
+      - database
+
+
+
+  addismedia_info:
+    extends:
+      service: crawler_base
+    container_name: addismedia_info
+    environment:
+      spider_name: addismediainfo
+      start_url: http://addismedia.info/
+    depends_on:
+      - database
+
+
+
+  wol_jw_org:
+    extends:
+      service: crawler_base
+    container_name: wol_jw_org
+    environment:
+      spider_name: woljworgamwolhr93lpamru
+      start_url: http://wol.jw.org/am/wol/h/r93/lp-am-ru
+    depends_on:
+      - database
+
+
+
+  ethioexplorer_com:
+    extends:
+      service: crawler_base
+    container_name: ethioexplorer_com
+    environment:
+      spider_name: ethioexplorercomcategoryamharicnews
+      start_url: http://ethioexplorer.com/category/amharic-news/
+    depends_on:
+      - database
+
+
+
+  www_answering-islam_org:
+    extends:
+      service: crawler_base
+    container_name: www_answering-islam_org
+    environment:
+      spider_name: wwwansweringislamorgamargna
+      start_url: http://www.answering-islam.org/amargna/
+    depends_on:
+      - database
+
+
+
+  www_scottishpoetrylibrary_org_uk:
+    extends:
+      service: crawler_base
+    container_name: www_scottishpoetrylibrary_org_uk
+    environment:
+      spider_name: wwwscottishpoetrylibraryorgukpoetrypoemsroadnowhereወደምንምየሚያደርስውመንገድ
+      start_url: http://www.scottishpoetrylibrary.org.uk/poetry/poems/road-nowhere-ወደ-ምንም-የሚያደርስው-መንገድ
+    depends_on:
+      - database
+
+
+
+  www_translation-english-online_com:
+    extends:
+      service: crawler_base
+    container_name: www_translation-english-online_com
+    environment:
+      spider_name: wwwtranslationenglishonlinecomTranslationEnglishAmharicfichierstranslationAmharictoenglishhtm
+      start_url: http://www.translation-english-online.com/Translation_English_Amharic_fichiers/translation_Amharic_to_english.htm
+    depends_on:
+      - database
+
+
+
+  introamharisk_cappelendamm_no:
+    extends:
+      service: crawler_base
+    container_name: introamharisk_cappelendamm_no
+    environment:
+      spider_name: introamhariskcappelendammno
+      start_url: http://introamharisk.cappelendamm.no/
+    depends_on:
+      - database
+
+
+
+  hornaffairs_com:
+    extends:
+      service: crawler_base
+    container_name: hornaffairs_com
+    environment:
+      spider_name: hornaffairscomam
+      start_url: http://hornaffairs.com/am
+    depends_on:
+      - database
+
+
+
+  ais_usvisa-info_com:
+    extends:
+      service: crawler_base
+    container_name: ais_usvisa-info_com
+    environment:
+      spider_name: aisusvisainfocomametnivinformationniv
+      start_url: https://ais.usvisa-info.com/am-et/niv/information/niv
+    depends_on:
+      - database
+
+
+
+  www_federalpolice_gov_et:
+    extends:
+      service: crawler_base
+    container_name: www_federalpolice_gov_et
+    environment:
+      spider_name: wwwfederalpolicegovetwebguesthome
+      start_url: http://www.federalpolice.gov.et/web/guest/home
+    depends_on:
+      - database
+
+
+
+  www_habeshastudent_com:
+    extends:
+      service: crawler_base
+    container_name: www_habeshastudent_com
+    environment:
+      spider_name: wwwhabeshastudentcom
+      start_url: http://www.habeshastudent.com/
+    depends_on:
+      - database
+
+
+
+  www_lds_org:
+    extends:
+      service: crawler_base
+    container_name: www_lds_org
+    environment:
+      spider_name: wwwldsorglanguagesamhlangamh
+      start_url: https://www.lds.org/languages/amh?lang=amh
+    depends_on:
+      - database
+
+
+
+  fekatcircus_com:
+    extends:
+      service: crawler_base
+    container_name: fekatcircus_com
+    environment:
+      spider_name: fekatcircuscomሕጋዊማንነትእናመዋቅርlangam
+      start_url: http://fekatcircus.com/ሕጋዊ-ማንነት-እና-መዋቅር/?lang=am
+    depends_on:
+      - database
+
+
+
+  www_kingcounty_gov:
+    extends:
+      service: crawler_base
+    container_name: www_kingcounty_gov
+    environment:
+      spider_name: wwwkingcountygovmediaCouncildocumentsTranslationsMKCCAmharicashx
+      start_url: http://www.kingcounty.gov/~/media/Council/documents/Translations/MKCC_Amharic.ashx
+    depends_on:
+      - database
+
+
+
+  ssd_eff_org:
+    extends:
+      service: crawler_base
+    container_name: ssd_eff_org
+    environment:
+      spider_name: ssdefforgam
+      start_url: https://ssd.eff.org/am/
+    depends_on:
+      - database
+
+
+
+  www_ethiotelecom_et:
+    extends:
+      service: crawler_base
+    container_name: www_ethiotelecom_et
+    environment:
+      spider_name: wwwethiotelecometetamh
+      start_url: http://www.ethiotelecom.et/etamh/
+    depends_on:
+      - database
+
+
+
+  www_alifradio_com:
+    extends:
+      service: crawler_base
+    container_name: www_alifradio_com
+    environment:
+      spider_name: wwwalifradiocom
+      start_url: http://www.alifradio.com/
+    depends_on:
+      - database
+
+
+
+  www_psssa_gov_et:
+    extends:
+      service: crawler_base
+    container_name: www_psssa_gov_et
+    environment:
+      spider_name: wwwpsssagovetwebamharic
+      start_url: http://www.psssa.gov.et/web/amharic/
+    depends_on:
+      - database
+
+
+
+  www_gotquestions_org:
+    extends:
+      service: crawler_base
+    container_name: www_gotquestions_org
+    environment:
+      spider_name: wwwgotquestionsorgAmharic
+      start_url: http://www.gotquestions.org/Amharic/
+    depends_on:
+      - database
+
+
+
+  ethiopia_thebeehive_org:
+    extends:
+      service: crawler_base
+    container_name: ethiopia_thebeehive_org
+    environment:
+      spider_name: ethiopiathebeehiveorg
+      start_url: http://ethiopia.thebeehive.org/
+    depends_on:
+      - database
+
+
+
+  www_ethiopianfolktales_com:
+    extends:
+      service: crawler_base
+    container_name: www_ethiopianfolktales_com
+    environment:
+      spider_name: wwwethiopianfolktalescomam
+      start_url: http://www.ethiopianfolktales.com/am/
+    depends_on:
+      - database
+
+
+
+  www_mot_gov_et:
+    extends:
+      service: crawler_base
+    container_name: www_mot_gov_et
+    environment:
+      spider_name: wwwmotgovetruwebamharic
+      start_url: http://www.mot.gov.et/ru/web/amharic/
+    depends_on:
+      - database
+
+
+
+  www_waltainfo_com:
+    extends:
+      service: crawler_base
+    container_name: www_waltainfo_com
+    environment:
+      spider_name: wwwwaltainfocomindexphpoptioncomcontentviewfrontpageItemid29
+      start_url: http://www.waltainfo.com/index.php?option=com_content&view=frontpage&Itemid=29
+    depends_on:
+      - database
+
+
+
+  ifp-08_ifp_uiuc_edu:
+    extends:
+      service: crawler_base
+    container_name: ifp-08_ifp_uiuc_edu
+    environment:
+      spider_name: ifp08ifpuiucedupublicwikipediaam20150424txt
+      start_url: http://ifp-08.ifp.uiuc.edu/public/wikipedia/am/20150424.txt
+    depends_on:
+      - database
+
+
+
+  www_migrationsverket_se:
+    extends:
+      service: crawler_base
+    container_name: www_migrationsverket_se
+    environment:
+      spider_name: wwwmigrationsverketseOtherlanguagesአማርኛhtml
+      start_url: http://www.migrationsverket.se/Other-languages/አማርኛ-.html
+    depends_on:
+      - database
+
+
+
+  traumaweb_secured_co_il:
+    extends:
+      service: crawler_base
+    container_name: traumaweb_secured_co_il
+    environment:
+      spider_name: traumawebsecuredcoilcontentaspPageId31langAm
+      start_url: http://traumaweb.secured.co.il/content.asp?PageId=31&lang=Am
+    depends_on:
+      - database
+
+
+
+  iyesus_com:
+    extends:
+      service: crawler_base
+    container_name: iyesus_com
+    environment:
+      spider_name: iyesuscom
+      start_url: http://iyesus.com/
+    depends_on:
+      - database
+
+
+
+  www_satenaw_com:
+    extends:
+      service: crawler_base
+    container_name: www_satenaw_com
+    environment:
+      spider_name: wwwsatenawcomamharic
+      start_url: http://www.satenaw.com/amharic/
+    depends_on:
+      - database
+
+
+
+  www_uog_edu_et:
+    extends:
+      service: crawler_base
+    container_name: www_uog_edu_et
+    environment:
+      spider_name: wwwuogeduetam
+      start_url: http://www.uog.edu.et/am/
+    depends_on:
+      - database
+
+
+
+  www_ethiopia_gov_et:
+    extends:
+      service: crawler_base
+    container_name: www_ethiopia_gov_et
+    environment:
+      spider_name: wwwethiopiagovetwebamharic
+      start_url: http://www.ethiopia.gov.et/web/amharic/
+    depends_on:
+      - database
+
+
+
+  www_fanabc_com:
+    extends:
+      service: crawler_base
+    container_name: www_fanabc_com
+    environment:
+      spider_name: wwwfanabccom
+      start_url: http://www.fanabc.com/
+    depends_on:
+      - database
+
+
+
+  am_radiovaticana_va:
+    extends:
+      service: crawler_base
+    container_name: am_radiovaticana_va
+    environment:
+      spider_name: amradiovaticanava
+      start_url: http://am.radiovaticana.va/
+    depends_on:
+      - database
+
+
+
+  www_ethiocist_org:
+    extends:
+      service: crawler_base
+    container_name: www_ethiocist_org
+    environment:
+      spider_name: wwwethiocistorgamharicchurchnews
+      start_url: http://www.ethiocist.org/amharic-church-news/
+    depends_on:
+      - database
+
+
+
+  www_ethiopiancotton_org:
+    extends:
+      service: crawler_base
+    container_name: www_ethiopiancotton_org
+    environment:
+      spider_name: wwwethiopiancottonorgamharic
+      start_url: http://www.ethiopiancotton.org/amharic/
+    depends_on:
+      - database
+
+
+
+  www_spl_org:
+    extends:
+      service: crawler_base
+    container_name: www_spl_org
+    environment:
+      spider_name: wwwsplorgaudiencesamharic
+      start_url: http://www.spl.org/audiences/amharic
+    depends_on:
+      - database
+
+
+
+  www_goolgule_com:
+    extends:
+      service: crawler_base
+    container_name: www_goolgule_com
+    environment:
+      spider_name: wwwgoolgulecom
+      start_url: http://www.goolgule.com/
+    depends_on:
+      - database
+
+
+
+  www_ethiopiazare_com:
+    extends:
+      service: crawler_base
+    container_name: www_ethiopiazare_com
+    environment:
+      spider_name: wwwethiopiazarecom
+      start_url: http://www.ethiopiazare.com/
+    depends_on:
+      - database
+
+
+
+  www_ethiomedia_com:
+    extends:
+      service: crawler_base
+    container_name: www_ethiomedia_com
+    environment:
+      spider_name: wwwethiomediacomaboveamhariccommentaries2010html
+      start_url: http://www.ethiomedia.com/above/amharic_commentaries_2010.html
+    depends_on:
+      - database
+
+
+
+  www_sabawipage_com:
+    extends:
+      service: crawler_base
+    container_name: www_sabawipage_com
+    environment:
+      spider_name: wwwsabawipagecom
+      start_url: http://www.sabawipage.com/
+    depends_on:
+      - database
+
+
+
+  www_abyssinialaw_com:
+    extends:
+      service: crawler_base
+    container_name: www_abyssinialaw_com
+    environment:
+      spider_name: wwwabyssinialawcom
+      start_url: http://www.abyssinialaw.com/
+    depends_on:
+      - database
+
+
+
+  www_ena_gov_et:
+    extends:
+      service: crawler_base
+    container_name: www_ena_gov_et
+    environment:
+      spider_name: wwwenagovet
+      start_url: http://www.ena.gov.et/
+    depends_on:
+      - database
+
+
+
+  ethioaddissport_com:
+    extends:
+      service: crawler_base
+    container_name: ethioaddissport_com
+    environment:
+      spider_name: ethioaddissportcom
+      start_url: http://ethioaddissport.com/
+    depends_on:
+      - database
+
+
+
+  www_ginbot7_org:
+    extends:
+      service: crawler_base
+    container_name: www_ginbot7_org
+    environment:
+      spider_name: wwwginbot7org
+      start_url: http://www.ginbot7.org/
+    depends_on:
+      - database
+
+
+
+  www_gcao_gov_et:
+    extends:
+      service: crawler_base
+    container_name: www_gcao_gov_et
+    environment:
+      spider_name: wwwgcaogovet
+      start_url: http://www.gcao.gov.et/
+    depends_on:
+      - database
+
+
+
+  maledatimes_com:
+    extends:
+      service: crawler_base
+    container_name: maledatimes_com
+    environment:
+      spider_name: maledatimescom
+      start_url: https://maledatimes.com
+    depends_on:
+      - database
+
+
+
+  capitalethiopia_com:
+    extends:
+      service: crawler_base
+    container_name: capitalethiopia_com
+    environment:
+      spider_name: capitalethiopiacom
+      start_url: https://capitalethiopia.com
+    depends_on:
+      - database
+
+
+
+  www_bbc_com:
+    extends:
+      service: crawler_base
+    container_name: www_bbc_com
+    environment:
+      spider_name: wwwbbccomamharic
+      start_url: https://www.bbc.com/amharic',
+    depends_on:
+      - database
+
+
+
+  ebstv_tv:
+    extends:
+      service: crawler_base
+    container_name: ebstv_tv
+    environment:
+      spider_name: ebstvtvcategorynews
+      start_url: https://ebstv.tv/category/news/
+    depends_on:
+      - database
+
+
+
+  www_abyssinica_com:
+    extends:
+      service: crawler_base
+    container_name: www_abyssinica_com
+    environment:
+      spider_name: wwwabyssinicacom
+      start_url: https://www.abyssinica.com/
+    depends_on:
+      - database
+
+
+
+  dawitworku_wordpress_com:
+    extends:
+      service: crawler_base
+    container_name: dawitworku_wordpress_com
+    environment:
+      spider_name: dawitworkuwordpresscomcategoryamharicblogs
+      start_url: https://dawitworku.wordpress.com/category/amharic-blogs/
+    depends_on:
+      - database
+
+
+
+  mehalarada_wordpress_com:
+    extends:
+      service: crawler_base
+    container_name: mehalarada_wordpress_com
+    environment:
+      spider_name: mehalaradawordpresscomcategoryamharicblogs
+      start_url: https://mehalarada.wordpress.com/category/amharic-blogs/
+    depends_on:
+      - database
+
+
+
+  www_hanaelias_org:
+    extends:
+      service: crawler_base
+    container_name: www_hanaelias_org
+    environment:
+      spider_name: wwwhanaeliasorghomecategoryAmharicblogs
+      start_url: https://www.hanaelias.org/home/category/Amharic+blogs
+    depends_on:
+      - database
+
+
+
+  www_sbs_com_au:
+    extends:
+      service: crawler_base
+    container_name: www_sbs_com_au
+    environment:
+      spider_name: wwwsbscomaulanguageamharicam
+      start_url: https://www.sbs.com.au/language/amharic/am
+    depends_on:
+      - database
+
+
+
+  amharic-zehabesha_com:
+    extends:
+      service: crawler_base
+    container_name: amharic-zehabesha_com
+    environment:
+      spider_name: amhariczehabeshacom
+      start_url: https://amharic-zehabesha.com/
+    depends_on:
+      - database
+
+
+
+  allaboutethiopia_com:
+    extends:
+      service: crawler_base
+    container_name: allaboutethiopia_com
+    environment:
+      spider_name: allaboutethiopiacom
+      start_url: https://allaboutethiopia.com
+    depends_on:
+      - database
+
+
+
+  www_ethiobookreview_com:
+    extends:
+      service: crawler_base
+    container_name: www_ethiobookreview_com
+    environment:
+      spider_name: wwwethiobookreviewcom
+      start_url: https://www.ethiobookreview.com/
+    depends_on:
+      - database
+
+
+
+  typicalethiopian_com:
+    extends:
+      service: crawler_base
+    container_name: typicalethiopian_com
+    environment:
+      spider_name: typicalethiopiancom
+      start_url: https://typicalethiopian.com
+    depends_on:
+      - database
+

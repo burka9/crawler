@@ -13,9 +13,9 @@ if [ "$1" = "run" ]
 then
 	if [ "$2" = "-d" ]
 	then
-		sudo docker compose up --build -d
+		docker compose up --no-recreate -d --remove-orphans
 	else
-		sudo docker compose up --build
+		docker compose up --no-recreate --remove-orphans
 	fi
 fi
 
